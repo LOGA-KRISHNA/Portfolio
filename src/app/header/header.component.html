@@ -1,0 +1,38 @@
+<div class="bg-gray-800 rounded-md px-3 py-2 text-white font-medium">
+    <nav class="flex justify-between items-center">
+        <div><a href="#">Portfoio</a></div>
+
+        <div class="hidden w-1/2 md:block" >
+            <ul class="flex justify-around">
+                @for (nav of navBar; track $index) {
+                    <li class="hover:bg-gray-900 rounded-md px-3 py-2"><a [routerLink]="nav.routerLink">{{nav.label}}</a></li>
+                }
+            </ul>
+        </div>
+        
+        <!-- Mobile -->
+        @if(mobile){
+                <div class=" md:hidden mobilenav text-2xl rounded-md " >
+                <ul class="flex flex-col  ml-2 space-y-3 items-center ">
+                    @for (nav of navBar; track $index) {
+                        <li class="hover:bg-gray-900 p-4 rounded-lg"><a [routerLink]="nav.routerLink">{{nav.label}}</a></li>
+                    }
+                </ul>
+            </div>
+        }
+        
+        <button class="block md:hidden" (click)="navMobileClicked()">
+            @if(!mobile){
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        }
+        @else{
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        } 
+        </button>
+        
+    </nav>
+</div>

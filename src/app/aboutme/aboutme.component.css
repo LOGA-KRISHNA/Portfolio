@@ -1,0 +1,11 @@
+.boxmode::before{
+    content:' ';
+    position:absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: 100%;
+    top: 0;
+    background-color: rgb(245, 240, 240);
+    border: 2px solid white;
+}

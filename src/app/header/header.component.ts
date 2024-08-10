@@ -12,19 +12,19 @@ import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 })
 export class HeaderComponent {
   navBar=[
+    {
+      label:"HOME",
+      routerLink:'home',
+    },
     {label:"Education",
       routerLink:'about',
     },
     {label:"Projects",
-      routerLink:'home',
+      routerLink:'project',
     },
     {label:"Contact",
-      routerLink:'home',
+      routerLink:'contact',
     },
-    {
-      label:"Links",
-      RouterLink:'footer'
-    }
   ];
 
   mobile:boolean=false;

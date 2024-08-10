@@ -5,7 +5,7 @@
         <div class="hidden w-1/2 md:block" >
             <ul class="flex justify-around">
                 @for (nav of navBar; track $index) {
-                    <li class="hover:bg-gray-900 rounded-md px-3 py-2"><a [routerLink]="nav.routerLink">{{nav.label}}</a></li>
+                    <li class="hover:bg-gray-900 rounded-md px-3 py-2"><a [routerLink]="nav.routerLink" [routerLinkActive]="'active'">{{nav.label}}</a></li>
                 }
             </ul>
         </div>
@@ -15,7 +15,7 @@
                 <div class=" md:hidden mobilenav text-2xl rounded-md " >
                 <ul class="flex flex-col  ml-2 space-y-3 items-center ">
                     @for (nav of navBar; track $index) {
-                        <li class="hover:bg-gray-900 p-4 rounded-lg"><a [routerLink]="nav.routerLink">{{nav.label}}</a></li>
+                        <li class="hover:bg-gray-900 p-4 rounded-lg"><a [routerLink]="nav.routerLink" [routerLinkActive]="'active'">{{nav.label}}</a></li>
                     }
                 </ul>
             </div>

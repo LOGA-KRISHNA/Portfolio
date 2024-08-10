@@ -1,13 +1,13 @@
-<div class="container flex text-white m-10 w-full space-x-5 flex-col md:flex-row">
+<div class=" container p-10 mt-0 flex flex-row items-center space-x-5 justify-around">
     <div>
         <h1 class="text-4xl text-gray-950 pl-6 font-bold">EDUCATION</h1>
         <div class="py-8 border-l-2 pl-10" >
             
             @for (item of obj; track $index) {
-            <div class="p-5 bg-gray-800 mb-1 rounded-md" >
-                <h4 class="text-blue-700">{{item.year}}</h4>
-                <h3 class="font-bold">{{item.education}}</h3>
-                <p>{{item.desc}}</p>
+            <div class="p-5 bg-gray-800 mb-4 rounded-md" >
+                <h4 class=" ">{{item.year}}</h4>
+                <h3 class="font-bold text-blue-700">{{item.education}}</h3>
+                <p class="text-white">{{item.desc}}</p>
             </div>
             }
             
@@ -18,12 +18,12 @@
         <div class="py-8 border-l-2 pl-10" >
             
             @for (item of obj2; track $index) {
-            <div class="p-5 bg-gray-800 mb-1 rounded-md" >
-                <h4 class="text-blue-700">{{item.year}}</h4>
-                <h3 class="font-bold">{{item.education}}</h3>
-                <p>{{item.desc}}</p>
-            </div>
-            }
+                <div class="p-5 bg-gray-800 mb-4 rounded-md" >
+                    <h4 class=" ">{{item.year}}</h4>
+                    <h3 class="font-bold text-blue-700">{{item.education}}</h3>
+                    <p class="text-white">{{item.desc}}</p>
+                </div>
+                }
             
         </div>
     </div>
